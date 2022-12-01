@@ -1,0 +1,25 @@
+{
+  "name": "structure-base-truffle",
+  "version": "0.0.1",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brayanesteves/structure-base-truffle-javascript.git"
+  },
+  "author": "Brayan Esteves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brayanesteves/structure-base-truffle-javascript/issues"
+  },
+  "homepage": "https://github.com/brayanesteves/structure-base-truffle-javascript#readme",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.2"
+  }
+}
