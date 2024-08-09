@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/brayanesteves/structure-base-truffle-javascript#readme",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^2.1.2"
+    "@truffle/hdwallet-provider": "^2.1.2",
+    "dotenv": "^16.4.5"
   }
 }
