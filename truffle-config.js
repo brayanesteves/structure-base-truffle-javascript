@@ -1,6 +1,7 @@
 const HDWalletProvider        = require('@truffle/hdwallet-provider');
 const HDWalletProviderPrivKey = require('truffle-hdwallet-provider-privkey');
-const infuraKey               = "fj4jll3k.....";
+// const infuraKey               = "fj4jll3k.....";
+const infuraKey               = process.env.INFURA_KEY;
 
 require('dotenv').config();
 
@@ -11,8 +12,9 @@ const provider = new HDWalletProvider({
 const PRIVATE_KEY_KOVAN = process.env.PRIVATE_KEY_KOVAN;
 const INFURA_ID_KOVAN   = process.env.INFURA_ID_KOVAN;
 
-const fs       = require('fs');
-const mnemonic = fs.readFileSync('.secret').toString().trim();
+const fs           = require('fs');
+const mnemonic     = fs.readFileSync('.secret').toString().trim();
+const mnemonic_env = process.env.MNEMONIC;
 
 module.exports = {
   networks: {
@@ -49,6 +51,20 @@ module.exports = {
       network_id: 4,
       gas: 3000000,
       gasPrice:10000000000,
+    },
+    rinkeby_dev: {
+      provider: () => HDWalletProvider(mnemonic_env, `https://rinkeby.infura.io/v3/${process.env.INFURA_API_KEY}`),
+      network_id: 4,
+      gas: 4500000,
+      gasPrice:200000000,
+    },
+
+    // Contract test: 0xF9CB3138776ee6d883A2A0A0767440675Fa196Ea
+    // tokens: ["0mcoB1gHXKh85xZNjdLnyuotnRvaSSqtzMsrAeQyUPGE", "QmTqWWgL66Cv2xRyT7AU2KQXCsULRsymYGv4Vt89yZ346C", "Qme4hhaKUFQ8tMcAo9rQY9Yz"],
+
+    // Set default mocha options here, use special reporters etc.
+    mocha: {
+      // timeout: 100000,
     },
     mainnet: {
       provider: () => HDWalletProvider(process.env.MNENOMIC, `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`),
