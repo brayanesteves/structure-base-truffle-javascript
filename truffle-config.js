@@ -86,5 +86,14 @@ module.exports = {
       // },
     },
   },
-
+  /**
+   * Truffle DB is currently disabled by default; to enable it, change enabled: 'false' to enabled: true
+   * 
+   * Note: if you migrated yous contracts prier to enabling this field in your 'Truffle' project and want
+   *       those previuosly migrated contracts available in the .db directory, you will need to run the following:
+   *       $ truffle migrate --reset --compile-all
+   */
+  db: {
+    enabled: false,
+  },
 };
