@@ -1,0 +1,16 @@
+{
+  "name": "oracles-on-the-ethereum-blockchain",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brayan Esteves",
+  "license": "ISC",
+  "dependencies": {
+    "ethereumjs-tx": "^2.1.1",
+    "node-fetch": "^2.6.0",
+    "web3": "^1.2.1"
+  }
+}
